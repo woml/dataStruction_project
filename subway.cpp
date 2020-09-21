@@ -17,9 +17,9 @@ subway :: ~subway() {
     delete [] line_arr;
 }
 
-void subway :: readFile() {
+void subway :: readFile(string s) {
     ifstream rf;
-    rf.open("BaseSubWayInfo.txt");
+    rf.open(s);
 
     rf >> all_line_num;
 
@@ -37,6 +37,22 @@ void subway :: readFile() {
     }
 
     rf.close();
+}
+
+int subway :: all_Line_Num() {
+    return all_line_num;
+}
+
+int subway :: line_Station_Num(int i) {
+    return line_arr[i].line_station_num;
+}
+
+string subway :: line_name(int i) {
+    return line_arr[i].line_name;
+}
+
+string subway :: line_station_name(int i, int j) {
+    return line_arr[i].station_name_arr[j];
 }
 
 double subway :: line_two_station_distance(int line, string n1, string n2) {

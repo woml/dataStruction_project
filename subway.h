@@ -28,9 +28,11 @@ class subway {
     public:
         subway(int line_n, int tranfer_station_n);      //需要输入最大线路数，最大换乘总数，创建结构体数组
         ~subway();
-        void readFile();
-        string line_name();
-        string line_station_name();
+        void readFile(string s);
+        int all_Line_Num();
+        int line_Station_Num(int i);
+        string line_name(int i);
+        string line_station_name(int i, int j);
         double line_two_station_distance(int line, string n1, string n2);
         void print_all_line_info();
         void print_all_transfer_info();

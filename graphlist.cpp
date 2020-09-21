@@ -81,8 +81,8 @@ void GraphList<T> :: delEdge(int from, int to) {
 }
 
 template <class T>
-void GraphList<T> :: SetNode(int i, T v) {
-    graList[i].head->SetLinkValue(v);
+void GraphList<T> :: SetNode(int i, T v, T n) {
+    graList[i].head->SetLinkValue(v, n);
 }
 
 template <class T>
