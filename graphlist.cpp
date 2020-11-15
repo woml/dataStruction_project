@@ -86,6 +86,13 @@ void GraphList<T> :: SetNode(int i, T v, T n) {
 }
 
 template <class T>
+bool GraphList<T> :: is_Station_Repeat(int n, T s) {
+    for (int i = 0; i < n; i++) {
+        graList[i].head->visit_Link_Value();
+    }
+}
+
+template <class T>
 T GraphList<T> ::  VisitNode(int i) {
     return graList[i].head->VisitValue();
 }

@@ -442,7 +442,6 @@ void print(GraphList<char> * & G, int s, Dist * & D) {
             }
             cout << 'v' << i << " length = " << D[i].length << endl;
         }
-        
     }
 }
 
